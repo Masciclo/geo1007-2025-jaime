@@ -1,5 +1,5 @@
 body {
-  background: #f9e933;
+  background: #072b15;
 }
 
 header,
@@ -16,12 +16,12 @@ footer .container {
 }
 
 header {
-  background: white;
+  background: rgb(72, 212, 100);
   overflow: auto;
 }
 
 header h1 {
-  float: left;
+  float: right;
   width: 570px;
 }
 
@@ -31,18 +31,32 @@ header nav {
 }
 
 main {
-  background: white;
+  background: rgb(166, 236, 161);
   overflow: auto;
 }
 
 main .left {
-  float: left;
+  float: center;
   width: 570px;
+  border: 5px solid #ffffff;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 22px;
+  letter-spacing: 4px;
+  word-spacing: 2px;
+  color: #000000;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-box-shadow: 5px 18px 15px 2px rgba(0, 0, 0, 0.67);
+  box-shadow: 5px 18px 15px 2px rgba(0, 0, 0, 0.67);
 }
 
 main .right {
-  float: right;
+  float: left;
   width: 285px;
+  border: 2px solid #f4f4f4;
 }
 
 footer .left {
@@ -53,4 +67,20 @@ footer .left {
 footer .sitemap {
   float: right;
   width: 285px;
+}
+
+p {
+  border: 10px solid #d0f6ce;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  word-spacing: 2px;
+  color: #e8e6e6;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-box-shadow: 5px 18px 15px 2px rgba(0, 0, 0, 0.67);
+  box-shadow: 5px 18px 15px 2px rgba(0, 0, 0, 0.67);
 }

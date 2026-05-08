@@ -110,6 +110,7 @@ var allFunctions = function () {
         textarea.cols = "60";
         textarea.style.border = "solid 1px black";
         textarea.textContent = this.responseText;
+        document.querySelector("main .forDebug2").innerHTML = "";
         document.querySelector("main .forDebug2").append(textarea);
         var xmlData = this.responseXML;
         handleXMLResponse(xmlData);
@@ -127,6 +128,8 @@ var allFunctions = function () {
   };
 
   var handleXMLResponse = function (data) {
+    document.querySelector("#xmlDataAsTable").innerHTML = "";
+    document.querySelector("main .messages2").innerHTML = "";
     var feature = data.getElementsByTagName("intersection")[0];
     if (typeof feature !== "undefined" && feature.childNodes.length > 0) {
       var headerRow = document.createElement("tr");
@@ -155,6 +158,7 @@ var allFunctions = function () {
   };
 
   var getAndDisplayMap = function (wms_request) {
+    document.querySelector("main .mapDiv").innerHTML = "";
     var img = document.createElement("img");
     img.style.display = "none";
     img.src = wms_request;

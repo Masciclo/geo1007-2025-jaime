@@ -71,8 +71,38 @@ var sound = new L.tileLayer.wms(wms_sound_url, {
   pointerCursor: true,
 });
 
+// 4. Lab 3 parcels WMS as overlay map
+var wms_parcels_url = "http://localhost:8080/geoserver/delft_parcels/wms?";
+var parcels = new L.tileLayer.wms(wms_parcels_url, {
+  layers: ["delft_parcels:parcels"],
+  styles: "",
+  format: "image/png",
+  transparent: true,
+  attribution: "Lab 3 Parcels",
+  pointerCursor: true,
+});
+
+// 5. TOP10NL grouped WMS layers
+var wms_top10nl_url = "http://localhost:8080/geoserver/delft_parcels/wms?";
+var top10nl = new L.tileLayer.wms(wms_top10nl_url, {
+  layers: [
+    "delft_parcels:TERREIN_VLAK",
+    "delft_parcels:GEBOUW_VLAK"
+  ],
+  styles: [
+    "terrein_vlak",
+    "gebouw_vlak"
+  ],
+  format: "image/png",
+  transparent: true,
+  attribution: "TOP10NL Delft",
+  pointerCursor: true,
+});
+
 var overlays = {
   "Road noise [WMS]": sound,
+  "Parcels [WMS]": parcels,
+  "TOP10NL [WMS]": top10nl
 };
 
 var baseLayers = {
