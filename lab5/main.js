@@ -68,10 +68,10 @@ function registerGeoLocate(mapInstance) {
   function onLocationFound(e) {
     var radius = e.accuracy;
 
-    let m = L.marker(e.latlng).addTo(mapInstance)
+    let m = L.marker(e.latlng).addTo(map)
       .bindPopup("You are within " + radius.toFixed(1) + " meters from this point").openPopup();
 
-    let c = L.circle(e.latlng, radius).addTo(mapInstance);
+    let c = L.circle(e.latlng, radius).addTo(map);
 
     setTimeout(function () {
       mapInstance.removeLayer(m);
